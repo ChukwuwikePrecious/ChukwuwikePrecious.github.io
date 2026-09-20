@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chukwuwike Precious | Web Developer</title>
+<meta name="description" content="Chukwuwike Precious is a web developer who builds websites, AI product visuals and AI video ads that get noticed and solve problems.">
+
+<!-- Colors the phone's address bar and lets the page follow light or dark mode -->
+<meta name="theme-color" id="theme-color" content="#A94F1C">
+<meta name="color-scheme" content="light dark">
+
+<!-- SHARE PREVIEW (WhatsApp, Instagram, X).
+     TODO after you publish: replace https://YOUR-SITE-URL with your real link, in the two lines marked below. -->
+<meta property="og:title" content="Chukwuwike Precious | Web Developer">
+<meta property="og:description" content="Websites, AI product visuals and AI video ads that get noticed and solve problems.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://YOUR-SITE-URL/"><!-- TODO -->
+<meta property="og:image" content="https://YOUR-SITE-URL/images/share.jpg"><!-- TODO -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chukwuwike Precious | Web Developer">
+<meta name="twitter:description" content="Websites, AI product visuals and AI video ads that get noticed and solve problems.">
+<meta name="twitter:image" content="https://YOUR-SITE-URL/images/share.jpg"><!-- TODO -->
+
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="images/icons/icon-192.png">
+
+<!-- Helps Google connect your name to your work -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Chukwuwike Precious",
+  "alternateName": "Chuks Presh",
+  "jobTitle": "Web Developer",
+  "description": "Web developer creating websites, AI product visuals and AI video ads.",
+  "sameAs": [
+    "https://www.instagram.com/chukwuwikepresh",
+    "https://x.com/chukwuwikepresh",
+    "https://www.threads.com/@chukwuwikepresh",
+    "https://www.youtube.com/@chukspresh1"
+  ]
+}
+</script>
+
+<!-- OPTIONAL private visit stats: create a free site at Cloudflare Web Analytics, then paste its snippet here.
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR-TOKEN"}'></script>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Runs before anything paints: picks light or dark (the visitor's saved choice, otherwise light),
+     and decides whether to play the short opening scene (once per visit) -->
+<script>
+(function () {
+    var root = document.documentElement;
+    try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = 'light';   // light by default; dark only after the visitor taps the moon button
+        root.setAttribute('data-theme', t);
+        var meta = document.getElementById('theme-color');
+        if (meta) meta.setAttribute('content', t === 'dark' ? '#17100B' : '#A94F1C');
+    } catch (e) { root.setAttribute('data-theme', 'light'); }
+    try {
+        var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!calm && !location.hash && !sessionStorage.getItem('slate')) {
+            root.classList.add('slate-on', 'slate-played');
+        }
+    } catch (e) {}
+})();
+</script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#top">Skip to content</a>
+
+<!-- OPENING SCENE -->
+<div class="slate" id="slate" aria-hidden="true">
+    <div class="slate-half slate-top"></div>
+    <div class="slate-half slate-bottom"></div>
+    <div class="slate-center">
+        <span class="slate-name">Chukwuwike Precious</span>
+        <span class="slate-line"></span>
+        <span class="slate-sub">Web developer and visual creator</span>
+    </div>
+</div>
+
+<header class="site-header">
+    <div class="wrap">
+        <a class="wordmark" href="#top">Chukwuwike<span class="wm-last"> Precious</span></a>
+        <nav class="site-nav" aria-label="Main">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+            <a class="btn btn-solid btn-small" href="https://www.instagram.com/chukwuwikepresh" target="_blank" rel="noopener">Message on Instagram</a>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+                <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+                <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+            </button>
+        </nav>
+    </div>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="wrap">
+            <div>
+                <h1><span>Chukwuwike</span><span>Precious</span></h1>
+                <p class="role">Web Developer</p>
+                <p class="tagline">I build websites, create AI visuals and produce AI video ads that get noticed and solve problems.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-solid" href="#work">See my work</a>
+                    <a class="btn btn-ghost" href="#contact">Get in touch</a>
+                </div>
+            </div>
+
+            <figure class="portrait">
+                <div class="arch">
+                    <span class="monogram" aria-hidden="true">CP</span>
+                    <!-- Add your photo as images/me.jpg. Until then the monogram shows. -->
+                    <img src="images/me.jpg" alt="Portrait of Chukwuwike Precious" fetchpriority="high" decoding="async" onerror="this.remove()">
+                </div>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="wrap">
+            <div class="about-copy">
+                <h2>About me</h2>
+                <p>I'm Chukwuwike Precious, a web developer and visual creator driven by a deep love for technology and AI. What started as curiosity about AI tools grew into a craft: I build clean, professional websites, create striking AI product visuals, and produce AI video ads designed to grab attention and get results.</p>
+                <p>I'm also studying cinematography, so every visual I make is shot through a sharper creative eye. Whether it's a website, product visuals or an AI video ad, I hold every project to one standard: it has to look exceptional and deliver results.</p>
+            </div>
+
+            <dl class="what">
+                <div>
+                    <dt>Websites</dt>
+                    <dd>Fast, polished websites that win trust in seconds and turn visitors into customers.</dd>
+                </div>
+                <div>
+                    <dt>AI product visuals</dt>
+                    <dd>Studio-quality product and campaign imagery for brands.</dd>
+                </div>
+                <div>
+                    <dt>AI video ads</dt>
+                    <dd>Short, scroll-stopping video ads built around your product.</dd>
+                </div>
+                <div>
+                    <dt>Cinematography</dt>
+                    <dd>In progress.</dd>
+                </div>
+            </dl>
+        </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work">
+        <div class="wrap">
+            <h2>Selected work</h2>
+            <p class="work-intro">Two AI product visual campaigns, followed by some websites I've built.</p>
+            <nav class="work-jump" aria-label="Jump to a project">
+                <a href="#presh">Presh</a>
+                <a href="#mister-giordani">Mister Giordani</a>
+                <a href="#websites">Websites</a>
+            </nav>
+
+            <article class="feature" id="presh">
+                <div class="feature-head">
+                    <h3>Presh</h3>
+                    <span class="badge">Concept</span>
+                </div>
+                <p class="feature-desc">A luxury handbag campaign: emerald leather, gold hardware and soft light on marble.</p>
+                <p class="tap-hint">Tap any image to view it larger.</p>
+                <div class="gallery" data-folder="images/presh" data-prefix="presh" data-count="12" data-visible="6" data-title="Presh"></div>
+            </article>
+
+            <article class="feature" id="mister-giordani">
+                <div class="feature-head">
+                    <h3>Mister Giordani</h3>
+                    <span class="badge">Concept</span>
+                </div>
+                <p class="feature-desc">A fragrance campaign built around amber, orange peel and warm wood, with a video ad.</p>
+                <p class="feature-note">Concept work, not affiliated with the brand.</p>
+                <div class="video-block">
+                    <div class="video" id="giordani-video">
+                        <video controls controlsList="nodownload noremoteplayback" disablePictureInPicture disableRemotePlayback playsinline preload="metadata" poster="images/mister-giordani/giordani-01.jpg">
+                            <source src="images/mister-giordani/giordani-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <button class="btn btn-ghost btn-small lights-btn" id="lights-btn" type="button" aria-pressed="false">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+                        <span>Lights down</span>
+                    </button>
+                </div>
+                <p class="tap-hint">Tap any image to view it larger.</p>
+                <div class="gallery" data-folder="images/mister-giordani" data-prefix="giordani" data-count="12" data-visible="6" data-title="Mister Giordani"></div>
+            </article>
+
+            <div class="web-list" id="websites">
+                <h3>Websites</h3>
+                <p class="work-intro">These projects are still in progress.</p>
+
+                <article class="site-project">
+                    <div class="site-copy">
+                        <h4>Project Ubuntu <span class="badge">In progress</span></h4>
+                        <p>A research site gathering insight from African creators and their supporters, to shape fan-support tools built for Africa.</p>
+                        <p class="site-note">Clean, easy to read, and quick to complete on any phone.</p>
+                        <!-- When the site is live, add a link here:
+                        <a class="btn btn-ghost btn-small" href="YOUR-LIVE-LINK" target="_blank" rel="noopener">View live site</a> -->
+                    </div>
+                    <div class="phones">
+                        <figure class="phone"><img src="images/websites/project-ubuntu-home.jpg" alt="Project Ubuntu homepage on a phone" loading="lazy"></figure>
+                        <figure class="phone"><img src="images/websites/project-ubuntu-form.jpg" alt="Project Ubuntu creator questionnaire on a phone" loading="lazy"></figure>
+                    </div>
+                </article>
+
+                <article class="site-project">
+                    <div class="site-copy">
+                        <h4>Nigeria Football Federation <span class="badge">In progress</span></h4>
+                        <p>A bold, mobile-first concept for a national football federation, with a striking hero, season stats and a color-coded squad grid. Concept only, not affiliated with the federation.</p>
+                        <p class="site-note">Bold color, clear hierarchy and a squad grid that reads at a glance.</p>
+                        <!-- When the site is live, add a link here:
+                        <a class="btn btn-ghost btn-small" href="YOUR-LIVE-LINK" target="_blank" rel="noopener">View live site</a> -->
+                    </div>
+                    <div class="phones">
+                        <figure class="phone"><img src="images/websites/nff-squad.jpg" alt="Nigeria Football Federation squad page on a phone" loading="lazy"></figure>
+                    </div>
+                </article>
+            </div>
+
+            <p class="watch"><a class="btn btn-ghost" href="https://www.youtube.com/@chukspresh1" target="_blank" rel="noopener">Watch my process on YouTube</a></p>
+        </div>
+    </section>
+
+    <!-- HOW I WORK -->
+    <section class="process" id="process">
+        <div class="wrap">
+            <div class="process-head">
+                <h2>How I work</h2>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    <h3>Brief</h3>
+                    <p>You share the idea. I ask the right questions.</p>
+                </li>
+                <li>
+                    <h3>Direction</h3>
+                    <p>I propose the look, and you approve it before I build.</p>
+                </li>
+                <li>
+                    <h3>Draft and refine</h3>
+                    <p>You see something real early, and we polish it if needed.</p>
+                </li>
+                <li>
+                    <h3>Delivery</h3>
+                    <p>You get the finished work, ready to publish or post.</p>
+                </li>
+            </ol>
+
+            <div class="process-cta">
+                <a class="btn btn-solid" href="#contact">Start a project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="wrap">
+            <h2>Questions</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>What do you need from me to start?</summary>
+                    <p>A short brief: what it's for, who it's for, and any logos, photos or references you already have.</p>
+                </details>
+                <details>
+                    <summary>How will I receive the work?</summary>
+                    <p>Websites come as finished files, with help getting them live. Visuals and video ads are delivered in sizes and formats ready to use.</p>
+                </details>
+                <details>
+                    <summary>Can I ask for changes?</summary>
+                    <p>Yes. I share a direction first and then a draft, and we refine it together before the final delivery.</p>
+                </details>
+                <details>
+                    <summary>What if I'm not sure what I need?</summary>
+                    <p>Send me the idea, even if it's rough. We'll shape it together into the right website, visual or video ad.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="wrap">
+            <h2>Have a project in mind?</h2>
+            <p class="lead">Send me a message.</p>
+
+            <p class="needs-label">Start with what you need:</p>
+            <div class="needs">
+                <a class="need" data-need="website" href="#contact">A website</a>
+                <a class="need" data-need="visuals" href="#contact">AI product visuals</a>
+                <a class="need" data-need="video" href="#contact">An AI video ad</a>
+            </div>
+
+            <div class="contact-actions">
+                <a class="btn btn-gold" href="https://www.instagram.com/chukwuwikepresh" target="_blank" rel="noopener">Message on Instagram</a>
+                <a class="btn btn-light" id="wa-link" href="#contact">Chat on WhatsApp</a>
+                <a class="btn btn-light" id="mail-link" href="#contact">Send an email</a>
+                <button class="btn btn-light" id="copy-mail" type="button">Copy email</button>
+            </div>
+
+            <div class="socials">
+                <a href="https://x.com/chukwuwikepresh" target="_blank" rel="noopener">X</a>
+                <a href="https://www.threads.com/@chukwuwikepresh" target="_blank" rel="noopener">Threads</a>
+                <a href="https://www.youtube.com/@chukspresh1" target="_blank" rel="noopener">YouTube</a>
+            </div>
+
+            <footer class="site-footer">
+                <span>&copy; 2026 Chukwuwike Precious</span>
+                <span>Web developer and AI visual creator</span>
+            </footer>
+        </div>
+    </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<dialog id="lightbox" aria-label="Image viewer">
+    <div class="lb-body">
+        <button class="lb-btn lb-close" id="lb-close" type="button" aria-label="Close viewer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <div class="lb-stage">
+            <button class="lb-btn lb-prev" id="lb-prev" type="button" aria-label="Previous image">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <img id="lb-img" alt="">
+            <button class="lb-btn lb-next" id="lb-next" type="button" aria-label="Next image">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+        <div class="lb-foot">
+            <p class="lb-count" id="lb-count" aria-live="polite"></p>
+            <div class="lb-dots" id="lb-dots"></div>
+        </div>
+    </div>
+</dialog>
+
+<!-- LIGHTS DOWN -->
+<div class="dim" id="dim" aria-hidden="true"></div>
+
+<!-- FLOATING BUTTONS -->
+<a class="float-cta" id="float-cta" href="#contact">Start a project</a>
+<button class="to-top" id="to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

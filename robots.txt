@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# After you publish, add your sitemap line here, for example:
+# Sitemap: https://YOUR-SITE-URL/sitemap.xml
